@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    352deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(159, 169, 171, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.titulo {
+  padding: 20px 0;
+  text-align: center;
+  font-family: 2.9em;
+  color: red;
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 1.6em auto;
+  display: grid;
+  gap: 1.6em;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: (1fr, 2fr, 1fr);
+}
+.container > .header,
+.container > .contenido,
+.container > .fotos,
+.container > .footer,
+.container > div {
+  padding: 20px;
+  border: 1px solid black;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.container .header {
+  grid-column: 1/6;
+
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(24, 24, 128, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  font-family: "Patrick Hand", cursive;
+
+  border-radius: 7px;
+
+  text-align: center;
+}
+ul {
+  list-style: none;
+  padding: 1.2rem;
+}
+li {
+  display: inline-block;
+  position: relative;
+  font-size: 1.4rem;
+  margin: 10px 20px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: red;
+}
+.container .footer {
+  grid-column: 1/6;
+}
+.container > .contenido {
+  grid-column: span 4;
+}
+.contenido .articulo {
+  grid-column: 1/5;
+  font-family: "Patrick Hand", cursive;
+  border-radius: 7px;
+  color: rgb(3, 3, 15);
+  font-size: 1rem;
+  line-height: 1.3;
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+.container .fotos img {
+  grid-column: 5/6;
+
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  margin-top: 5px;
+  width: 300px;
+}
+.padre {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.barra {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(24, 24, 128, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  font-family: "Patrick Hand", cursive;
+
+  border-radius: 7px;
+
+  text-align: center;
+  padding: 20px;
+  border: 1px solid black;
+}
+.barra .footer {
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .container .articulo {
+    grid-column: 1/6;
+  }
+  .container .fotos {
+    grid-column: 1/6;
+  }
+}
